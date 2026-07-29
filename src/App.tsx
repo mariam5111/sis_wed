@@ -12,7 +12,7 @@ export default function App() {
 
   useEffect(() => {
     // 💡 مسار ملف الصوت الموجود داخل مجلد public
-    audioRef.current = new Audio('/public/محمود العسيلي وصابرين - وأخيراً (بدون موسيقى) جديد 2026.mp3')
+    audioRef.current = new Audio('/public/wedding-music.mp3')
     audioRef.current.loop = true
     audioRef.current.volume = 0.28
 
