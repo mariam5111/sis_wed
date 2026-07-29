@@ -1,0 +1,10 @@
+{
+  "description": "Create stunning digital wedding invitations with interactive features, RSVP options, and countdown timers, perfect for couples planning their special day.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
