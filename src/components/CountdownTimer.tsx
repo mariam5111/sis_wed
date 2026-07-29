@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 
 // 💡 التاريخ المظبوط: 7 سبتمبر الساعة 6 مساءً
-const TARGET = new Date('2026-09-07T18:00:00')
+const TARGET = new Date('2026-09-07T20:00:00')
 
 function getTimeLeft() {
   const diff = Math.max(0, TARGET.getTime() - Date.now())
