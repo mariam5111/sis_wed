@@ -14,22 +14,28 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. إعداد بيئة Node.js
+      # 2. تثبيت pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      # 3. إعداد بيئة Node.js مع كاش pnpm
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: 'pnpm'
 
-      # 3. تثبيت الـ Dependencies
+      # 4. تثبيت الـ Dependencies باستخدام pnpm
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install
 
-      # 4. عمل Build للمشروع
+      # 5. عمل Build للمشروع
       - name: Build project
-        run: npm run build
+        run: pnpm run build
 
-      # 5. رفع مجلد dist باستخدام Netlify CLI الرسمية
+      # 6. رفع مجلد dist إلى Netlify
       - name: Deploy to Netlify
         run: npx netlify-cli deploy --dir=dist --prod
         env:
