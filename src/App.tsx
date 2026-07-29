@@ -11,8 +11,8 @@ export default function App() {
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
   useEffect(() => {
-    // 💡 مسار ملف الصوت الموجود داخل مجلد public
-    audioRef.current = new Audio('/public/wedding-music.mp3')
+    // 💡 التعديل هنا: شيلنا كلمة /public من المسار
+    audioRef.current = new Audio('/wedding-music.mp3')
     audioRef.current.loop = true
     audioRef.current.volume = 0.28
 
